@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-box">
+            <div class="header-box_logo">
+                <a href="/">
+                    <img src="/src/img/logo-entel.svg" alt="logo entel">
+                </a>
+            </div>
+            <div class="header-nav">
+                <div class="header-nav_link">
+                    <a class="header-nav_item" href="/">Formulario</a>
+                </div>
+                <div class="header-nav_link">
+                    <a class="header-nav_item" href="/lista-vendedores.html">Lista formularioo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="formulario">
+        <div class="formulario-head">
+            <div class="formulario-head_title">
+                <h1>Nuevo formulario</h1>
+            </div>
+            <div class="formulario-head_descripcion">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    bed industry's standard dummy text ever since.</p>
+            </div>
+        </div>
+
+        <form onsubmit="guardarVendedor(event)">
+            <h4>Datos del vendedor:</h4>
+
+            
+            <div class="formulario-container">
+                <div class="input-item nombre">
+                    <label for="nombre">Nombre y apellido:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+    
+                <div class="input-item">
+                    <label for="rut">Rut Vendedor</label>
+                    <input type="text" id="rut" required>
+                </div>
+    
+            </div>
+            <hr>
+            <h4>Datos del vehículo:</h4>
+
+            <div class="formulario-container">
+                <div class="input-item">
+                    <label for="patente"> Patente vehículo</label>
+                    <input type="text" id="patente" required>
+                </div>
+    
+                <div class="input-item">
+                    <label for="marca">Marca vehículo</label>
+                <select id="marca" onchange="cargarModelos()">
+                    <option value=""></option>
+                    <option value="toyota">Toyota</option>
+                    <option value="chevrolet">Chevrolet</option>
+                    <option value="ford">Ford</option>
+                    <option value="honda">Honda</option>
+                    <option value="volkswagen">Volkswagen</option>
+                </select>
+                </div>
+    
+                <div class="input-item">
+                    <label for="modelo">Modelo vehículo</label>
+                <select id="modelo" required>
+                    <option value=""></option>
+                </select>
+                </div>
+    
+                <div class="input-item">
+                    <label for="color">Color vehículo</label>
+                <select id="color" required>
+                    <option value=""></option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Gris">Gris</option>
+                </select>
+                </div>
+            </div>
+
+            <hr>
+
+
+            <input class="submit" type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <script src="/src/js/form.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;300;400;500;600;700&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+table { border-collapse: collapse; }
+
+
+header {
+    background-color: #002EFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+header div.header-box {
+    display: flex;
+    max-width: 88vw;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header div.header-box .header-box_logo {
+    max-width: 35px;
+}
+
+header div.header-box .header-box_logo img {
+    width: 100%;
+}
+
+header div.header-box div.header-nav {
+    margin: auto;
+    margin-right: 0;
+}
+
+header div.header-box div.header-nav div.header-nav_link {
+    display: inline-block;
+    margin: 0;
+}
+
+header div.header-box div.header-nav div.header-nav_link a.header-nav_item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+section.formulario {
+    max-width: 290px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+
+section.formulario div.formulario-head div.formulario-head_title h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #191919;
+}
+
+section.formulario div.formulario-head div.formulario-head_descripcion p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #191919;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+section.formulario form h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #002EFF;
+    margin-bottom: 26px;
+}
+
+section.formulario form .formulario-container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+}
+
+section.formulario form .formulario-container .input-item {
+    display: block;
+}
+
+section.formulario form .formulario-container .input-item label {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #191919;
+    display: block;
+}
+
+section.formulario form .formulario-container .input-item input {
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    border-radius: 8px;
+    height: 45px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+section.formulario form hr {
+    margin: 40px 0;
+}
+
+
+section.formulario form .formulario-container .input-item select {
+    width: 100%;
+    height: 45px;
+    display: block;
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    margin-top: 10px;
+    border-radius: 8px;
+    background-image: url('/src/img/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 28px auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section.formulario form .submit {
+    height: 45px;
+    width: 100%;
+    display: block;
+    margin: auto;
+    background-color: #FF3D00;
+    border: none;
+    border-radius: 22.5px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+/* Lista de Vendedores */
+
+section.formulario .tabla-container {
+    width: 100%;
+
+}
+
+section.formulario .tabla-container tr {
+    border-bottom: 1px solid #CCCCCC;
+}
+
+section.formulario .tabla-container tr th {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #191919;
+    padding-bottom: 21px;
+}
+section.formulario .tabla-container tr th p{
+    text-align: center;
+}
+section.formulario .tabla-container tbody tr{
+    text-align: center;
+    position: relative;
+}
+tr, td, th{
+    padding: 10px;;
+}
+
+
+@media screen and (min-width: 350px) {
+
+    section.formulario {
+        max-width: 322px;
+    }
+
+    header div.header-box div.header-nav div.header-nav_link a.header-nav_item {
+        margin: auto 6px;
+    }
+}
+
+
+@media screen and (min-width: 780px) {
+    header div.header-box {
+        max-width: 62vw;
+    }
+
+    header div.header-box .header-box_logo {
+        max-width: 65px;
+    }
+
+    header div.header-box div.header-nav div.header-nav_link {
+        display: inline-block;
+        margin: 0 30px;
+    }
+
+    section.formulario {
+        max-width: 825px;
+    }
+
+    section.formulario div.formulario-head div.formulario-head_title h1 {
+        font-size: 30px;
+        line-height: 36px;
+
+    }
+
+    section.formulario form h4 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        color: #002EFF;
+        margin-bottom: 26px;
+    }
+
+    section.formulario form .formulario-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+    }
+
+    section.formulario form .formulario-container .input-item {
+        display: block;
+    }
+
+    section.formulario form .formulario-container .nombre {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    /* section.formulario form .formulario-container .input-item:first-child {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    } */
+
+    section.formulario form .formulario-container .input-item label {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #191919;
+        display: block;
+    }
+
+    section.formulario form .formulario-container .input-item input {
+        background-color: #FFFFFF;
+        border: 1px solid #999999;
+        border-radius: 8px;
+        height: 45px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    section.formulario form hr {
+        margin: 40px 0;
+    }
+
+
+    section.formulario form .formulario-container .input-item select {
+        max-width: 290px;
+    }
+
+
+    section.formulario form .submit {
+        width: 255px;
+        height: 45px;
+        display: block;
+        margin-right: 0px;
+        margin-left: auto;
+        background-color: #FF3D00;
+        border: none;
+        border-radius: 22.5px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+}
+
+td button{
+    position: absolute;
+    right: 30px;
+}
+
+.eliminar{
+    background-color: #ffff;
+    border: none;
+}
+
+.eliminar::after{
+    content: url('/src/img/icono-eliminar.svg');
+
+}

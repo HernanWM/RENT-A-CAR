@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<link rel="stylesheet" href="/src/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+	<header>
+        <div class="header-box">
+            <div class="header-box_logo">
+                <a href="/">
+                    <img src="/src/img/logo-entel.svg" alt="logo entel">
+                </a>
+            </div>
+            <div class="header-nav">
+                <div class="header-nav_link">
+                    <a class="header-nav_item" href="/">Formulario</a>
+                </div>
+                <div class="header-nav_link">
+					<a class="header-nav_item" href="/lista-vendedores.html">Lista formularioo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+	<section class="formulario">
+        <div class="formulario-head">
+            <div class="formulario-head_title">
+				<h1>Lista formulario</h1>
+            </div>
+			<div class="formulario-head_descripcion">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    bed industry's standard dummy text ever since.</p>
+            </div>
+	
+			<table class="tabla-container">
+				<thead>
+					<tr class="primera-fila">
+						<th><p>Nombre</p></th>
+						<th><p>RUT <br> vendedor</p></th>
+						<th><p>Patente <br> vehículo</p></th>
+						<th><p>Marca <br> vehículo</p></th>
+						<th><p>Modelo <br> vehículo</p></th>
+						<th><p>Color <br> vehículo</p></th>
+						<th><p>Eliminar</p></th>
+					</tr>
+				</thead>
+				<div class="tabla-header">
+				</div>
+				<tbody>
+				</tbody>
+			</table>
+    </section>
+
+	<script src="/src/js/list.js"></script>
+
+
+	<script>
+		 window.addEventListener('DOMContentLoaded', function() {
+        // Recorrer todas las filas excepto la primera
+        let filas = document.querySelectorAll('.tabla-container tr:not(.primera-fila)');
+        filas.forEach(function(fila) {
+            // Crear botón de eliminar y agregarlo a la última columna
+            let boton = document.createElement('button');
+            boton.classList.add('eliminar');
+            fila.lastElementChild.appendChild(boton);
+        });
+    
+        // Eliminar fila al hacer clic en el botón de eliminar
+        document.addEventListener('click', function(event) {
+            if (event.target.classList.contains('eliminar')) {
+                event.target.closest('tr').remove();
+            }
+        });
+    });
+	</script>
+</body>
+</html>

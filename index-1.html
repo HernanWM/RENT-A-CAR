@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Formulario de registro de vendedores y vehículos</h1>
+    <form onsubmit="return validarFormulario()">
+        <label for="rut">RUT del vendedor:</label>
+        <input type="text" id="rut" name="rut" required><br><br>
+
+        <label for="nombre">Nombre y apellido del vendedor:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="patente">Patente del vehículo:</label>
+        <input type="text" id="patente" name="patente" required><br><br>
+
+        <label for="marca">Marca del vehículo:</label>
+        <select id="marca" name="marca" required>
+            <option value="">Selecciona una marca</option>
+            <option value="toyota">Toyota</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="ford">Ford</option>
+            <option value="honda">Honda</option>
+            <option value="volkswagen">Volkswagen</option>
+        </select><br><br>
+
+        <label for="modelo">Modelo del vehículo:</label>
+        <select id="modelo" name="modelo" required>
+            <option value="">Selecciona un modelo</option>
+        </select><br><br>
+
+        <label for="color">Color del vehículo:</label>
+        <select id="color" name="color" required>
+            <option value="">Selecciona un color</option>
+            <option value="negro">Negro</option>
+            <option value="blanco">Blanco</option>
+            <option value="gris">Gris</option>
+            <option value="azul">Azul</option>
+            <option value="rojo">Rojo</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+
+    <script>
+        const marcasModelos = {
+            toyota: ["Camry", "Corolla"],
+            chevrolet: ["Spark"],
+            ford: ["Fiesta"],
+            honda: ["Civic"],
+            volkswagen: ["Jetta"]
+        };
+
+        // Obtener los elementos del formulario
+        const form = document.querySelector("form");
+        const modeloSelect = document.getElementById("modelo");
+
+        // Agregar event listeners para cuando cambie la marca
+        const marcaSelect = document.getElementById("marca");
+        marcaSelect.addEventListener("change", () => {
+            const modelos = marcasModelos[marcaSelect.value];
+            while (modeloSelect.options.length > 1) {
+                modeloSelect.remove(1);
+            }
+            for (const modelo of modelos) {
+                const option = document.createElement("option");
+                option.value = modelo;
+                option.text = modelo;
+                modeloSelect.add(option);
+            }
+        });
+  // Crear un objeto para almacenar los datos del formulario
+window.formulario = {};
+
+// Obtener los valores de los campos del formulario
+var rut = document.getElementById('rut').value;
+var nombre = document.getElementById('nombre').value;
+var patente = document.getElementById('patente').value;
+var marca = document.getElementById('marca').value;
+var modelo = document.getElementById('modelo').value;
+var color = document.getElementById('color').value;
+
+// Asignar los valores a las propiedades del objeto formulario
+window.formulario.rut = rut;
+window.formulario.nombre = nombre;
+window.formulario.patente = patente;
+window.formulario.marca = marca;
+window.formulario.modelo = modelo;
+window.formulario.color = color;
+    </script>
+</body>
+
+</html>
