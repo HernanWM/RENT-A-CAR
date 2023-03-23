@@ -3,7 +3,7 @@
 
 Este es un formulario web diseñado para la gestión de información de ventas de vehículos. El formulario cuenta con campos para ingresar el RUT del vendedor, nombre y apellido, patente del vehículo, marca, modelo y color. Además, cuenta con la posibilidad de seleccionar opciones de lista previamente cargadas para las marcas y colores.
 
-En el siguiente link pueden ver una version de prueba 
+En el siguiente link pueden ver una version de prueba https://celadon-bavarois-f5cd55.netlify.app/
 
 Para garantizar la validez de la información ingresada, hemos implementado una validación en JavaScript que asegura que todos los campos requeridos estén completos y que los valores ingresados sean válidos.
 
