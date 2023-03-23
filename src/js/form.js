@@ -1,9 +1,9 @@
 const marcasModelos = {
     toyota: ["Camry", "Corolla"],
-    chevrolet: ["Spark"],
-    ford: ["Fiesta"],
-    honda: ["Civic"],
-    volkswagen: ["Jetta"]
+    chevrolet: ["Spark", "Camaro"],
+    ford: ["Fiesta", "Edge"],
+    honda: ["Civic", "Civic"],
+    volkswagen: ["Jetta", "Polo"]
 };
 
 // Obtener los elementos del formulario
